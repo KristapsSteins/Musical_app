@@ -1,0 +1,182 @@
+.title {
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 30px;
+    font-family: 700;
+    min-height: 150px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+
+.ginImage {
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.avatarImage {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.instrumentImage {
+    width: 100%;
+}
+
+.instrument {
+    position: relative;
+    left: 0%;
+    text-align: center;
+}
+
+.lamp {
+    text-align: center;
+    font-size: 25px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.currentInstrumentWrapper {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.instrumentInfo {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.playableInstrument {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+}
+
+.bestPlayButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+}
+
+.audioButton1 {
+    position: absolute;
+    opacity: 0.5;
+    border: 1px solid black;
+    padding: 15px 25px;
+    top: 59%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.audioButton2 {
+    position: absolute;
+    opacity: 0.5;
+    border: 1px solid black;
+    padding: 15px 25px;
+    top: 59%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.audioButton3 {
+    position: absolute;
+    opacity: 0.5;
+    border: 1px solid black;
+    padding: 15px 25px;
+    top: 59%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.audioButton4 {
+    position: absolute;
+    opacity: 0.5;
+    border: 1px solid black;
+    padding: 15px 25px;
+    top: 59%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.audioButton5 {
+    position: absolute;
+    opacity: 0.5;
+    border: 1px solid black;
+    padding: 15px 25px;
+    top: 59%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.audioButton1:hover {
+    opacity: 0.7;
+}
+
+.audioButton2:hover {
+    opacity: 0.7;
+}
+
+.audioButton3:hover {
+    opacity: 0.7;
+}
+
+.audioButton4:hover {
+    opacity: 0.7;
+}
+
+.audioButton5:hover {
+    opacity: 0.7;
+}
+
+.paragraphTextColor {
+    color: red;
+}
+
+.button62 {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button62:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+  .button62:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
