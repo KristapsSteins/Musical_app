@@ -10,13 +10,13 @@ import { getGinDetails } from "../../utils/getGinDetails";
 import lampImage from "../../assets/newLamp.png";
 import ginImage from "../../assets/jaunais_aladins2.png";
 import DisplayTitle from "../DisplayTitle/DisplayTitle";
-import InstrumentButtons from "../InstrumentButtons/InstrumentButtons";
+import Instrument from "../Instrument/Instrument";
 
 const Gin = () => {
     const [likeMusic, setLikeMusic] = useState(false);
 
     const { name = "", src = "" } = useParams();
-    const { imageSrc, instrumentSrc, currentInstrument = "" } = getGinDetails(src);
+    const { imageSrc, instrumentSrc = "", currentInstrument = "" } = getGinDetails(src);
 
     const [clickCount, setClickCount] = useState(0);
     const [clickAudioCount, setClickAudioCount] = useState(0);
@@ -24,46 +24,6 @@ const Gin = () => {
     const [showAudioButtons, setShowAudioButtons] = useState(true);
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
-
-    let instrument = null;
-
-    if (clickCount >= 6) {
-        instrument = (
-            <motion.div 
-                className={style.instrument}
-                animate={{ scale: 1 }}
-                initial={{ scale: 0.3 }}
-                transition={{ delay: 0.2 }}
-            >
-                {clickAudioCount < 10 ? (
-                    <span className={style.instrumentInfo}>
-                        Click to squares to start playing
-                    </span>
-                ) : (
-                    <span className={style.instrumentInfo}>
-                        You need to try your best
-                    </span>
-                )}
-                <motion.img
-                    src={instrumentSrc}
-                    alt={instrumentSrc}
-                    className={style.instrumentImage}
-                    animate={{ scale: 1 }}
-                    initial={{ scale: 0.3 }}
-                    transition={{ delay: 0.2 }}
-                />
-                {showAudioButtons && (
-                    <InstrumentButtons 
-                        currentInstrument={currentInstrument}
-                        clickAudioCount={clickAudioCount}
-                        setClickAudioCount={setClickAudioCount}
-                        setShowAudioButtons={setShowAudioButtons}
-                        audioRef={audioRef}
-                    />
-                )}
-            </motion.div>
-        );
-    }
 
     if (isButtonDisabled) {
         setTimeout(() => {
@@ -107,9 +67,16 @@ const Gin = () => {
                     />
                 </motion.div>
                 <div className={style.currentInstrumentWrapper}>
-                    <div className={style.playableInstrument}>
-                        {instrument}
-                    </div>
+                    <Instrument 
+                        instrumentSrc={instrumentSrc}
+                        clickCount={clickCount}
+                        currentInstrument={currentInstrument}
+                        clickAudioCount={clickAudioCount}
+                        setClickAudioCount={setClickAudioCount}
+                        setShowAudioButtons={setShowAudioButtons}
+                        audioRef={audioRef}
+                        showAudioButtons={showAudioButtons}
+                    />
                     <audio ref={audioRef}></audio>
                 </div>
                 <div className={style.bestPlayButton}>

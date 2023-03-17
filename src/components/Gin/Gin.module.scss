@@ -34,12 +34,6 @@
     width: 100%;
 }
 
-.instrument {
-    position: relative;
-    left: 0%;
-    text-align: center;
-}
-
 .currentInstrumentWrapper {
     padding-top: 10px;
     width: 100%;
@@ -50,12 +44,6 @@
 .instrumentInfo {
     font-size: 25px;
     padding-bottom: 20px;
-}
-
-.playableInstrument {
-    position: absolute;
-    width: 100%;
-    max-width: 500px;
 }
 
 .bestPlayButton {

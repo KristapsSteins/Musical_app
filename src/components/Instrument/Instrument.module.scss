@@ -1,0 +1,16 @@
+.instrument {
+    position: relative;
+    left: 0%;
+    text-align: center;
+}
+
+.playableInstrument {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+}
+
+.instrumentInfo {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
