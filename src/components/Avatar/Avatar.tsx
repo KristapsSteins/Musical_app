@@ -3,17 +3,18 @@ import style from "./Avatar.module.scss";
 type AvatarProps = {
     animal: string
     name: string
+    text: string
 }
 
-const Avatar = ({animal, name}: AvatarProps) => {
+const Avatar = ({animal, name, text}: AvatarProps) => {
     return (
         <>
             <img src={animal} alt={name} />
+            <span>
+                Name: <span className={style.text}>{name}</span>
+            </span>
             <p>
-                <span className={style.label}>Name:</span> {name}
-            </p>
-            <p>
-                <span className={style.label}>Instrument:</span> Guitar
+                Instrument: {text}
             </p>
         </>
     );

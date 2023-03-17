@@ -51,6 +51,7 @@ const AvatarForm = () => {
                             <Avatar 
                                 animal={tiger}
                                 name={name}
+                                text={"guitar"}
                             />
                         </div>
                         <div 
@@ -59,6 +60,7 @@ const AvatarForm = () => {
                             <Avatar 
                                 animal={sheep}
                                 name={name}
+                                text={"flute"}
                             />
                         </div>
                         <div 
@@ -67,6 +69,7 @@ const AvatarForm = () => {
                             <Avatar 
                                 animal={hedgehog}
                                 name={name}
+                                text={"violin"}
                             />
                         </div>
                     </div>

@@ -12,9 +12,6 @@ type DisplayTitleProps = {
 const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayTitleProps) => {
     let titleText = (
         <motion.div
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
-            style={{ x: 100 }}
         >
             <p>
             Congratulations, {name}. You have stumbled upon a mysterious lamp.
@@ -26,41 +23,27 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
 
     if (clickCount >= 6) {
         titleText = (
-            <motion.p
-                animate={{ scale: 1 }}
-                initial={{ scale: 0.3 }}
-                transition={{ delay: 0.2 }}
-            >
+            <p>
                 Hello {name}! Thank you for freeing me! I can see that you have an instrument. 
                 If you play a beautiful melody on it and I enjoy listening to it, 
                 I will grant your every wish!
-            </motion.p>
+            </p>
         );
     }
 
     if (clickAudioCount === 10) {
         titleText = (
-            <motion.p
-                animate={{ scale: 1 }}
-                initial={{ scale: 0.3 }}
-                transition={{ delay: 0.2 }}
-                className={style.paragraphTextColor}
-            >
+            <p className={style.paragraphTextColor}>
                 Sorry, your music didn't quite fit my taste. But don't give up! You can try again and maybe next time I'll enjoy it more.
-            </motion.p>
+            </p>
         );
     }
 
     if (likeMusic) {
         titleText = (
-            <motion.p
-                animate={{ scale: 1 }}
-                initial={{ scale: 0.5 }}
-                transition={{ delay: 0.2 }}
-                className={style.likeText}
-            >
+            <p className={style.likeMusicText}>
                 Your music is great! If you imagine something, I can make it happen. Just wait a bit.
-            </motion.p>
+            </p>
         );
     }
 
