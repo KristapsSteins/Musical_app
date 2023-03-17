@@ -12,9 +12,9 @@ type DisplayTitleProps = {
 const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayTitleProps) => {
     let titleText = (
         <motion.div
-            animate={{ scale: 1 }}
-            initial={{ scale: 0.3 }}
-            transition={{ delay: 0.2 }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            style={{ x: 100 }}
         >
             <p>
             Congratulations, {name}. You have stumbled upon a mysterious lamp.
@@ -29,7 +29,7 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
             <motion.p
                 animate={{ scale: 1 }}
                 initial={{ scale: 0.3 }}
-                transition={{ delay: 0.1 }}
+                transition={{ delay: 0.2 }}
             >
                 Hello {name}! Thank you for freeing me! I can see that you have an instrument. 
                 If you play a beautiful melody on it and I enjoy listening to it, 
@@ -55,7 +55,7 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
         titleText = (
             <motion.p
                 animate={{ scale: 1 }}
-                initial={{ scale: 0.3 }}
+                initial={{ scale: 0.5 }}
                 transition={{ delay: 0.2 }}
                 className={style.likeText}
             >
