@@ -15,7 +15,7 @@
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    width: 100%;
+    max-width: 560px;
     font-size: 25px;
     cursor: pointer;
     color: black;
@@ -57,10 +57,6 @@
     font-weight: 700;
     gap: 20px;
     padding-top: 40px;
-}
-
-.image {
-    max-height: 356px;
 }
 
 .button62 {
@@ -108,3 +104,30 @@
     letter-spacing: 3px;
 }
 
+@media (max-width: 570px) {
+    .title {
+        padding: 10px 10px;
+    }
+    .avatars {
+      gap: 5px;
+      padding: 10px 10px;
+    }
+    .avatar {
+        max-width: 200px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .title {
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+    .avatars {
+      gap: 2px;
+      padding: 10px 10px;
+    }
+    .avatar {
+        max-width: 150px;
+        font-size: 17px;
+    }
+  }

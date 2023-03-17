@@ -19,16 +19,15 @@
     padding: 0px 100px;
 }
 
-.ginImage {
-    width: 100%;
-    max-height: 400px;
-    max-width: 400px;
-}
-
 .avatarImage {
     width: 100%;
     max-width: 400px;
     max-height: 400px;
+}
+
+.ginImage {
+    max-height: 400px;
+    max-width: 400px;
 }
 
 .instrumentImage {
@@ -39,13 +38,6 @@
     position: relative;
     left: 0%;
     text-align: center;
-}
-
-.lamp {
-    text-align: center;
-    font-size: 25px;
-    max-width: 400px;
-    max-height: 400px;
 }
 
 .currentInstrumentWrapper {
@@ -179,4 +171,63 @@
   
   .button62:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+
+  @media (max-width: 880px) {
+    .title {
+        padding: 10px 10px;
+    }
+    .imageWrapper {
+      padding: 10px 10px;
+      width: 100%;
+    }
+    .ginImage {
+        max-width: 320px;
+        max-height: 320px;
+    }
+    .avatarImage {
+        max-width: 320px;
+        max-height: 320px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .title {
+        font-size: 20px;
+    }
+    .imageWrapper {
+        padding: 10px 10px;
+        justify-content: space-between
+      }
+    .ginImage {
+        max-width: 250px;
+        max-height: 250px;
+    }
+    .avatarImage {
+        max-width: 250px;
+        max-height: 250px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .title {
+        font-size: 20px;
+    }
+    .imageWrapper {
+        padding: 10px 10px;
+        justify-content: space-between
+      }
+    .ginImage {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .avatarImage {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .currentInstrumentWrapper {
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
   }

@@ -24,6 +24,9 @@ function Gin() {
     const [clickCount, setClickCount] = useState(0);
     const [clickAudioCount, setClickAudioCount] = useState(0);
     const [ginImageSrc, setGinImageSrc] = useState(lampImage);
+    const [showAudioButtons, setShowAudioButtons] = useState(true);
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+    const [likeMusic, setLikeMusic] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
 
     let message = null;
@@ -64,17 +67,24 @@ function Gin() {
                     alt={instrumentSrc}
                     className={style.instrumentImage}
                 />
-                {audioFiles.map((audioFile) => (
-                    <button 
-                        className={style[audioFile.buttonClass]} 
-                        key={audioFile.buttonClass}
-                        onClick={() => {
-                        audioRef.current!.src = audioFile.file;
-                        audioRef.current!.play();
-                        setClickAudioCount(clickAudioCount + 1);
-                        }}
-                    ></button>
-                ))}
+                {showAudioButtons && (
+                    <div className={style.audioButtons}>
+                        {audioFiles.map((audioFile) => (
+                            <button
+                                className={style[audioFile.buttonClass]}
+                                key={audioFile.buttonClass}
+                                onClick={() => {
+                                    audioRef.current!.src = audioFile.file;
+                                    audioRef.current!.play();
+                                    setClickAudioCount(clickAudioCount + 1);
+                                    if (clickAudioCount === 9) {
+                                        setShowAudioButtons(false);
+                                    }
+                                }}
+                            ></button>
+                        ))}
+                    </div>
+                )}
             </motion.div>
         );
         paragraphText = (
@@ -102,6 +112,24 @@ function Gin() {
         );
     }
 
+    if (isButtonDisabled) {
+        setTimeout(() => {
+            setLikeMusic(true);
+        }, 3000);
+    }
+
+    if (likeMusic) {
+        paragraphText = (
+            <motion.p
+                animate={{ scale: 1 }}
+                initial={{ scale: 0 }}
+                transition={{ delay: 0.8 }}
+            >
+                I like your music
+            </motion.p>
+        );
+    }
+
     return (
         <div>
             <div className={style.title}>
@@ -116,22 +144,17 @@ function Gin() {
                         alt={imageSrc}
                         className={style.avatarImage}
                     />
-                    <motion.div 
-                        className={style.lamp}
-                    >
-                        <img 
-                            src={ginImageSrc} 
-                            alt={lampImage} 
-                            className={style.ginImage} 
-                            onClick={() => {
-                                setClickCount(clickCount + 1);
-                                if (clickCount >= 5) {
-                                    setGinImageSrc(ginImage);
-                                }
-                            }}
-                        />
-                        {message}
-                    </motion.div>
+                    <img 
+                        src={ginImageSrc} 
+                        alt={lampImage} 
+                        className={style.ginImage} 
+                        onClick={() => {
+                            setClickCount(clickCount + 1);
+                            if (clickCount >= 5) {
+                                setGinImageSrc(ginImage);
+                            }
+                        }}
+                    />
                 </motion.div>
                 <div className={style.currentInstrumentWrapper}>
                     <div className={style.playableInstrument}>
@@ -143,6 +166,18 @@ function Gin() {
                     {clickAudioCount === 10 && (
                         <button 
                             className={style.button62}
+                            onClick={() => {
+                                setIsButtonDisabled(true);
+                                if (currentInstrument === "flute") {
+                                    audioRef.current!.src = fluteAudioFiles[5];
+                                } else if (currentInstrument === "guitar") {
+                                    audioRef.current!.src = guitarAudioFiles[5];
+                                } else if (currentInstrument === "violin") {
+                                    audioRef.current!.src = violinAudioFiles[5];
+                                }
+                                audioRef.current!.play();
+                            }}
+                            disabled={isButtonDisabled}
                         >
                             Play your best
                         </button>

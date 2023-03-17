@@ -34,7 +34,7 @@ const AvatarForm = () => {
                     </label>  
                     <div className={style.avatars}>
                         <div className={`${style.avatar} ${selectedAvatar === "tiger" ? style.selected : ""}`} onClick={() => handleAvatarClick("tiger")}>
-                            <img className={style.image} src={tiger} alt={name} />
+                            <img src={tiger} alt={name} />
                             <p>
                                 <span className={style.label}>Name:</span> {name}
                             </p>
