@@ -3,3 +3,24 @@
     max-width: 400px;
     max-height: 400px;
 }
+
+@media (max-width: 880px) {
+    .avatarImage {
+        max-width: 320px;
+        max-height: 320px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .avatarImage {
+        max-width: 250px;
+        max-height: 250px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .avatarImage {
+        max-width: 200px;
+        max-height: 200px;
+    }
+  }

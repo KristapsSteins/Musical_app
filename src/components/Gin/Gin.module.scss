@@ -1,10 +1,3 @@
-.title {
-    text-align: center;
-    padding: 30px 0px;
-    font-size: 30px;
-    font-family: 700;
-    min-height: 150px;
-}
 
 .wrapper {
     display: flex;
@@ -19,31 +12,11 @@
     padding: 0px 100px;
 }
 
-.avatarImage {
-    width: 100%;
-    max-width: 400px;
-    max-height: 400px;
-}
-
-.ginImage {
-    max-height: 400px;
-    max-width: 400px;
-}
-
-.instrumentImage {
-    width: 100%;
-}
-
 .currentInstrumentWrapper {
     padding-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.instrumentInfo {
-    font-size: 25px;
-    padding-bottom: 20px;
 }
 
 .bestPlayButton {
@@ -52,163 +25,25 @@
     padding-top: 250px;
 }
 
-.audioButton1 {
-    position: absolute;
-    opacity: 0.5;
-    border: 1px solid black;
-    padding: 15px 25px;
-    top: 59%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-.audioButton2 {
-    position: absolute;
-    opacity: 0.5;
-    border: 1px solid black;
-    padding: 15px 25px;
-    top: 59%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-.audioButton3 {
-    position: absolute;
-    opacity: 0.5;
-    border: 1px solid black;
-    padding: 15px 25px;
-    top: 59%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-.audioButton4 {
-    position: absolute;
-    opacity: 0.5;
-    border: 1px solid black;
-    padding: 15px 25px;
-    top: 59%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-.audioButton5 {
-    position: absolute;
-    opacity: 0.5;
-    border: 1px solid black;
-    padding: 15px 25px;
-    top: 59%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-.audioButton1:hover {
-    opacity: 0.7;
-}
-
-.audioButton2:hover {
-    opacity: 0.7;
-}
-
-.audioButton3:hover {
-    opacity: 0.7;
-}
-
-.audioButton4:hover {
-    opacity: 0.7;
-}
-
-.audioButton5:hover {
-    opacity: 0.7;
-}
-
-.button62 {
-    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
-    border: 0;
-    border-radius: 12px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    letter-spacing: 5px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow .2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-  }
-  
-  .button62:not([disabled]):focus {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-  }
-  
-  .button62:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-  }
-
   @media (max-width: 880px) {
-    .title {
-        padding: 10px 10px;
-    }
     .imageWrapper {
       padding: 10px 10px;
       width: 100%;
     }
-    .ginImage {
-        max-width: 320px;
-        max-height: 320px;
-    }
-    .avatarImage {
-        max-width: 320px;
-        max-height: 320px;
-    }
   }
 
   @media (max-width: 600px) {
-    .title {
-        font-size: 20px;
-    }
     .imageWrapper {
         padding: 10px 10px;
         justify-content: space-between
       }
-    .ginImage {
-        max-width: 250px;
-        max-height: 250px;
-    }
-    .avatarImage {
-        max-width: 250px;
-        max-height: 250px;
-    }
   }
 
   @media (max-width: 450px) {
-    .title {
-        font-size: 20px;
-    }
     .imageWrapper {
         padding: 10px 10px;
         justify-content: space-between
       }
-    .ginImage {
-        max-width: 200px;
-        max-height: 200px;
-    }
-    .avatarImage {
-        max-width: 200px;
-        max-height: 200px;
-    }
     .currentInstrumentWrapper {
         padding-top: 10px;
         display: flex;

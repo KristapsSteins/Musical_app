@@ -9,3 +9,21 @@
 .paragraphTextColor {
     color: red;
 }
+
+@media (max-width: 880px) {
+    .title {
+        padding: 10px 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .title {
+        font-size: 20px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .title {
+        font-size: 20px;
+    }
+  }
