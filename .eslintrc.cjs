@@ -20,6 +20,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "react/no-unescaped-entities": "off",
         "react/react-in-jsx-scope": "off",
         "indent": [
             "error",
