@@ -24,3 +24,10 @@
         max-height: 200px;
     }
   }
+
+  @media (max-width: 410px) {
+    .avatarImage {
+        max-width: 150px;
+        max-height: 150px;
+    }
+  }
