@@ -18,7 +18,7 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
         >
             <p>
             Congratulations, {name}. You have stumbled upon a mysterious lamp.
-            Who knows what wonders it might hold? Click that lamp and see what secrets
+            Who knows what wonders it might hold? Click that lamp three times and see what secrets
             it reveals!
             </p>
         </motion.div>
@@ -31,8 +31,9 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
                 initial={{ scale: 0.3 }}
                 transition={{ delay: 0.1 }}
             >
-                Hey {name}, you have freed me! I see you have an instrument. If you play me
-                that instrument and I like it, I will give you everything you desire, i repeat everything!.
+                Hello {name}! Thank you for freeing me! I can see that you have an instrument. 
+                If you play a beautiful melody on it and I enjoy listening to it, 
+                I will grant your every wish!
             </motion.p>
         );
     }
@@ -45,7 +46,7 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
                 transition={{ delay: 0.2 }}
                 className={style.paragraphTextColor}
             >
-                I apologize, but your music doesn't resonate with me. It's simply not in line with my personal taste. If you're interested, you could consider giving it another shot.
+                Sorry, your music didn't quite fit my taste. But don't give up! You can try again and maybe next time I'll enjoy it more.
             </motion.p>
         );
     }
@@ -56,8 +57,9 @@ const DisplayTitle = ({ name, clickCount, clickAudioCount, likeMusic }: DisplayT
                 animate={{ scale: 1 }}
                 initial={{ scale: 0.3 }}
                 transition={{ delay: 0.2 }}
+                className={style.likeText}
             >
-                I like your music
+                Your music is great! If you imagine something, I can make it happen. Just wait a bit.
             </motion.p>
         );
     }
