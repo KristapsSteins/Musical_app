@@ -38,7 +38,7 @@ const Instrument = ({
             >
                 {clickAudioCount < 10 ? (
                     <span className={style.instrumentInfo}>
-                        Click to squares to start playing
+                        Click squares to play.
                     </span>
                 ) : (
                     <span className={style.instrumentInfo}>
